@@ -1,0 +1,24 @@
+
+### Test 1 - unassigned questions 20
+POST http://localhost:4004/dev-challenge/Tests(ID=1fa8b72d-a491-4185-9e66-c9e144610c2d,IsActiveEntity=true)/DevChallengeService.assignQuestionsToTest
+Content-Type: application/json
+
+{ "questionsCount": 0 }
+
+### Test 2 - unassigned questions 20
+POST http://localhost:4004/dev-challenge/Tests(ID=1fa8b72d-a491-4185-9e66-c9e144610c2d,IsActiveEntity=true)/DevChallengeService.assignQuestionsToTest
+Content-Type: application/json
+
+{ "questionsCount": 15 }
+
+### Test 3 - unassigned questions 5
+POST http://localhost:4004/dev-challenge/Tests(ID=1fa8b72d-a491-4185-9e66-c9e144610c2d,IsActiveEntity=true)/DevChallengeService.assignQuestionsToTest
+Content-Type: application/json
+
+{ "questionsCount": 8 }
+
+### Test 4 - unassigned questions 0
+POST http://localhost:4004/dev-challenge/Tests(ID=1fa8b72d-a491-4185-9e66-c9e144610c2d,IsActiveEntity=true)/DevChallengeService.assignQuestionsToTest
+Content-Type: application/json
+
+{ "questionsCount": 4 }
