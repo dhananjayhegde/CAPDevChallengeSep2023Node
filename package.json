@@ -10,9 +10,14 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.108.14",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
-    "start": "cds run"
-  }
+    "start": "cds run",
+    "watch-fullstack-dev-challenge": "cds watch --open fullstack-dev-challenge/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/fullstack-dev-challenge"
+  ]
 }
