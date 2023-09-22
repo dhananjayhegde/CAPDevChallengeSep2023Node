@@ -61,12 +61,35 @@ annotate service.Tests with @(
                 Value: createdAt,
             },
         ],
-    },
+    });
 
-    UI.Facets                 : [{
-        $Type : 'UI.ReferenceFacet',
-        ID    : 'TestDetailsFacet',
-        Label : 'Test Details',
-        Target: '@UI.FieldGroup#TestDetails',
-    }, ]
+annotate service.Questions with @(UI.LineItem: [
+    {
+        $Type: 'UI.DataField',
+        Label: 'Question Text',
+        Value: text,
+    },
+    {
+        $Type: 'UI.DataField',
+        Label: 'Answer Text',
+        Value: answers.text,
+    }
+]);
+
+
+annotate service.Tests with @(
+    UI.Facets : [
+        {
+            $Type : 'UI.ReferenceFacet',
+            ID : 'TestDetailsFacet',
+            Label : 'Test Details',
+            Target : '@UI.FieldGroup#TestDetails',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Target : 'questions/@UI.LineItem',
+            Label : 'Questions',
+            ID : 'idQuestionsTable',
+        }
+    ]
 );
