@@ -61,7 +61,17 @@ annotate service.Tests with @(
                 Value: createdAt,
             },
         ],
-    });
+    },
+    
+    UI.Identification: [
+        {
+            $Type : 'UI.DataFieldForAction',
+            Label : 'Add Question (Anno)',
+            Action : 'DevChallengeService.assignQuestionsToTest'
+        }
+    ]
+);
+
 
 annotate service.Questions with @(UI.LineItem: [
     {
@@ -93,3 +103,13 @@ annotate service.Tests with @(
         }
     ]
 );
+
+// Side Effect after executing the action addQuestionsToTests (annotation based action)
+// annotate service.addQuestionsToTests with @( 
+//     Common.SideEffects: {
+//         @cds.odata.bindingparameter.name : '_it',
+//         TargetProperties : [
+//             '_it/questions'
+//         ],
+//     }
+// );
