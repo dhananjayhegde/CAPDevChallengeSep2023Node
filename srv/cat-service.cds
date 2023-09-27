@@ -9,7 +9,7 @@ service DevChallengeService @(path: '/dev-challenge') {
             @Common.SideEffects : {
                 TargetProperties : ['_it/questions']
             } 
-            action assignQuestionsToTest (questionsCount : Integer ) returns String
+            action assignQuestionsToTest (questionsCount : Integer @Common.Label : 'Questions Count') returns String
         }
     ;
     entity Questions as projection on fullstack_dev_challenge.Questions; 

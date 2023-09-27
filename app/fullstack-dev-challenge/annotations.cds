@@ -103,7 +103,6 @@ annotate service.Tests with @(
         }
     ]
 );
-
 // Side Effect after executing the action addQuestionsToTests (annotation based action)
 // annotate service.addQuestionsToTests with @( 
 //     Common.SideEffects: {

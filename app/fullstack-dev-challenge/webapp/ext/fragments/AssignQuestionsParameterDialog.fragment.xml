@@ -1,0 +1,24 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:macros="sap.fe.macros"
+>
+	<Dialog 
+        title="Action Parameters" 
+        id="idDialog" 
+        core:require="{handler: 'fullstackdevchallenge/ext/controller/CustomController'}"
+        binding="/assignQuestionsToTest(...)"
+    >
+		<VBox id="idVBox" binding="{$Parameter}">
+			<Label id="idLabelQuestionsCount" text="Questions Count"/>
+            <Input id="idInputQuestionsCount" value="{questionsCount}"></Input>
+		</VBox>
+		<beginButton>
+			<Button id="idCancelDialogBtn" text="Cancel" press="handler.onPressCancelDialog" />
+        </beginButton>
+        <endButton>
+            <Button id="idSubmitActionBtn" text="Submit" press="handler.onPressSubmitAction" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
