@@ -63,13 +63,13 @@ annotate service.Tests with @(
         ],
     },
     
-    UI.Identification: [
-        {
-            $Type : 'UI.DataFieldForAction',
-            Label : 'Add Question (Anno)',
-            Action : 'DevChallengeService.assignQuestionsToTest'
-        }
-    ]
+    // UI.Identification: [
+    //     {
+    //         $Type : 'UI.DataFieldForAction',
+    //         Label : 'Add Question (Anno)',
+    //         Action : 'DevChallengeService.assignQuestionsToTest'
+    //     }
+    // ]
 );
 
 
@@ -103,7 +103,6 @@ annotate service.Tests with @(
         }
     ]
 );
-
 // Side Effect after executing the action addQuestionsToTests (annotation based action)
 // annotate service.addQuestionsToTests with @( 
 //     Common.SideEffects: {

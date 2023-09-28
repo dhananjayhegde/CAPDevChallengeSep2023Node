@@ -42,11 +42,11 @@ module.exports = async function DevChallengeService() {
             console.debug('> updates: \n', updateConunt)            
 
             if ( avlblQuestionsCount >= reqQuestionsCount ) {
-                //req.notify(`${ avlblQuestionsCount } questions assigned to test`)
-                return `${ avlblQuestionsCount } questions assigned to test`
+                req.notify(`${ avlblQuestionsCount } questions assigned to test`)
+                // return `${ avlblQuestionsCount } questions assigned to test`
             } else {
-                //req.warn(`Only ${ avlblQuestionsCount } assigned to test.  Create more questions and then try again`)
-                return `Only ${ avlblQuestionsCount } assigned to test.  Create more questions and then try again`
+                req.warn(`Only ${ avlblQuestionsCount } questions assigned to test.  Create more questions and then try again`)
+                // return `Only ${ avlblQuestionsCount } questions assigned to test.  Create more questions and then try again`
             }
 
         } catch (e) {
