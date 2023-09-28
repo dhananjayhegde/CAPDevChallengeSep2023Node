@@ -63,13 +63,13 @@ annotate service.Tests with @(
         ],
     },
     
-    UI.Identification: [
-        {
-            $Type : 'UI.DataFieldForAction',
-            Label : 'Add Question (Anno)',
-            Action : 'DevChallengeService.assignQuestionsToTest'
-        }
-    ]
+    // UI.Identification: [
+    //     {
+    //         $Type : 'UI.DataFieldForAction',
+    //         Label : 'Add Question (Anno)',
+    //         Action : 'DevChallengeService.assignQuestionsToTest'
+    //     }
+    // ]
 );
 
 
